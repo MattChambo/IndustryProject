@@ -1,3 +1,11 @@
+body {
+	margin: 0;
+}
+
+a:visited {
+	color: black;
+}
+
 .logo {
 	width: 100%;
 	padding-bottom: 5px; 
@@ -5,13 +13,7 @@
 
 nav ul {
 	list-style: none;
-}
-
-nav ul a {
-	text-decoration: none;
-	color: black;
-	font-family: arial;
-	font-size: larger;
+	margin-left: 0 !important;
 }
 
 .loginsignup a {
@@ -19,8 +21,80 @@ nav ul a {
 }
 
 .hamburger {
-	font-size: 45px !important;
+	font-size: 45px;
 	background-color: white;
 	border-style: none;
 	color: black;
+}
+
+.login {
+	color: black;
+	font-family: arial;
+	font-size: 25px;
+	float: right;
+	margin-top: 12px;
+	margin-right: 10px;
+}
+
+.menulink {
+	text-decoration: none;
+	color: black;
+	font-family: arial;
+	font-size: 30px;
+	padding: 20px;
+	display: block;
+	width: 100%;
+	border: solid;
+	border width: 2px;
+}
+
+nav div {
+	margin-bottom: 10px;
+}
+
+.image {
+	width: 100%;
+}
+
+.menu li {
+	margin-bottom: 2px;
+}
+
+.footerimage {
+	height: 40px;
+}
+
+footer {
+	font-family: arial, sans-serif;
+	color: white;
+	background-color: black;
+	padding-bottom: 10px;
+	padding-top: 10px;
+
+}
+
+footer span {
+	margin-left: 10px;
+}
+
+#socialmedia {
+	float: right;
+	padding-right: 10px; 
+}
+
+footer::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.image {
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.image:hover {
+      opacity: 0.5;
 }

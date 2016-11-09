@@ -12,7 +12,7 @@
 		<h1>Index Page</h1>
 		<ul>
 			<li>
-				<a href="#">Chapter 1</a>
+				<a href="/Chapter">Chapter 1</a>
 			</li>
 			<li>
 				<a href="#">Chapter 2</a>
