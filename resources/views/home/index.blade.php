@@ -6,35 +6,54 @@
 		<title>Sophisticated Pedagogical Practice</title>
 		<meta name="description" content="Sophisticated Pedagogical Practice">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="">
 		<link rel="stylesheet" type="text/css" href="/css/styles.css">
 	</head>
 	<body>
 
 		<nav>
 			<div>
-			<a href="/"><img src="/images/logo.png" class="logo"></a>
-			<button class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></button>
-			<span class="login"><a href="">Login</a> | <a href="">Sign Up</a></span>
+				<div id="logocontainer">
+					<a href="/"><img src="/images/logo.png" class="logo"></a>
+				</div>
+					<button class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></button>
+					<span class="login"><a href="">Login</a> | <a href="">Sign Up</a></span>
 			</div>
-			<ul class="menu">
-				<li>
-					<a href="/About" class="menulink">About Mary</a>
-				</li>
-				<li>
-					<a href="/AboutBook" class="menulink">About the Book</a>
-				</li>
-				<li>
-					<a href="/Index" class="menulink">Index</a>
-				</li>
-			</ul>
+			<div id="menucontainer">
+				<ul class="menu">
+					<li>
+						<a href="/About" class="menulink">About Mary</a>
+					</li>
+					<li>
+						<a href="/AboutBook" class="menulink">About the Book</a>
+					</li>
+					<li>
+						<a href="/Index" class="menulink">Index</a>
+					</li>
+				</ul>
+			</div>
+
+			<div id="desktopmenucontainer">
+				<ul class="desktopmenu">
+					<li>
+						<a href="/About">About Mary</a>
+					</li>
+					<li>
+						<a href="/AboutBook">About the Book</a>
+					</li>
+					<li>
+						<a href="/Index">Index</a>
+					</li>
+				</ul>
+			</div>
 		</nav>
 
-		<div class="content">
+		<div class="contenthome">
 			<div id="imageright">
 				<a href="/About"><img src="/images/Mary1.jpg" alt="A photo of Mary Chamberlain" class="image"></a>
 			</div>
 			<div id="imageleft">
-				<a href="/AboutBook"><img src="/images/book1.jpg" alt="A photo of a book" class="image"></a>
+				<a href="/AboutBook"><img src="/images/book1.jpg" alt="A photo of a book" class="image"></a><br>
 				<a href="/Index"><img src="/images/Business.jpg" alt="A photo of a desk with a computer on it" class="image"></a>
 			</div>
 		</div>
