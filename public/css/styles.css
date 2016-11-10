@@ -128,6 +128,13 @@ footer::after {
 	margin-top: 10px;
 }
 
+@media all and (min-width: 500px) {
+	.contenthome {
+		width: 400px;
+		margin: 0 auto;
+	}
+}
+
 @media all and (min-width: 650px) {
 
 	.menu {
@@ -242,6 +249,10 @@ footer::after {
 		margin-bottom: 40px;
 		margin-top: 40px;
 		margin-left: 75px;
+	}
+		#logocontainer {
+		margin-top: 40px;
+		margin-bottom: 30px;
 	}
  
 }
