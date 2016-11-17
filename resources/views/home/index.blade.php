@@ -6,7 +6,10 @@
 		<title>Sophisticated Pedagogical Practice</title>
 		<meta name="description" content="Sophisticated Pedagogical Practice">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="">
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css.map">
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css.map">
 		<link rel="stylesheet" type="text/css" href="/css/styles.css">
 	</head>
 	<body>
@@ -67,6 +70,8 @@
 		</footer>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/npm.js"></script>
 		<script src="/js/navigation.js"></script>
 	</body>
 </html>
