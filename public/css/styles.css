@@ -164,6 +164,18 @@ footer::after {
 
 }
 
+.contentchapter {
+	width: 95%;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+.contentchapter h1 {
+	text-align: center;
+	margin-top: 50px;
+
+}
+
 @media all and (min-width: 500px) {
 	.contenthome {
 		width: 400px;
