@@ -20,7 +20,7 @@
 					<a href="/"><img src="/images/logo.png" class="logo"></a>
 				</div>
 					<button class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></button>
-					<span class="login"><a href="">Login</a> | <a href="">Sign Up</a></span>
+					<span class="login"><a href="/Login">Login</a> | <a href="/Signup">Sign Up</a></span>
 			</div>
 			<div id="menucontainer">
 				<ul class="menu">

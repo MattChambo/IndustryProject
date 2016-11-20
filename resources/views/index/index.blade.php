@@ -1,18 +1,3 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial=scale=1">
-		<title>Sophisticated Pedagogical Practice</title>
-		<meta name="description" content="Sophisticated Pedagogical Practice">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-	</head>
-	<body>
-		<nav></nav>
-
-
-	</body>
-</html>
 
 <!doctype html>
 <html lang="en">
@@ -27,8 +12,6 @@
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css.map">
 		<link rel="stylesheet" type="text/css" href="/css/styles.css">
-		<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-  		<script>tinymce.init({ selector:'textarea' });</script>
 	</head>
 	<body>
 
@@ -90,7 +73,7 @@
 							<textarea class="form-control">
 								
 							</textarea><br>
-							<button type="submit">Submit</button>
+							<button type="submit" class="btn btn-default">Edit Description</button>
 						</form>
 					</li>
 				</div>
@@ -101,7 +84,7 @@
 							<textarea class="form-control">
 								
 							</textarea><br>
-							<button type="submit">Submit</button>
+							<button type="submit" class="btn btn-default">Edit Description</button>
 						</form>
 					</li>
 				</div>
@@ -112,7 +95,7 @@
 							<textarea class="form-control">
 								
 							</textarea><br>
-							<button type="submit">Submit</button>
+							<button type="submit" class="btn btn-default">Edit Description</button>
 						</form>
 					</li>
 				</div>
@@ -123,7 +106,7 @@
 							<textarea class="form-control">
 								
 							</textarea><br>
-							<button type="submit">Submit</button>
+							<button type="submit" class="btn btn-default">Edit Description</button>
 						</form>
 					</li>
 				</div>
