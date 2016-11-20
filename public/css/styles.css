@@ -91,7 +91,6 @@ footer {
 	background-color: black;
 	padding-bottom: 10px;
 	padding-top: 10px;
-
 }
 
 footer span {
@@ -161,7 +160,6 @@ footer::after {
 	padding: 10px;
 	font-size: x-large;
 	margin: 10px;
-
 }
 
 .contentchapter {
@@ -173,10 +171,64 @@ footer::after {
 .contentchapter h1 {
 	text-align: center;
 	margin-top: 50px;
+}
 
+.contentlogin {
+	margin-top: 100px;
+	margin-bottom: 150px;
+}
+
+.contentsignup {
+	margin-top: 100px;
+	margin-bottom: 30px;
+}
+
+#login,
+#signup {
+	width: 90%;
+	margin: 0 auto;
+	border-style: solid;
+	border-width: 2px;
+	padding: 15px;
+}
+
+#loginSubmit,
+#signupSubmit {
+	margin-top: 10px;
+}
+
+#login h1,
+#signup h1 {
+	text-align: center;
+}
+
+.contentapproval {
+	width: 95%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+#user {
+	width: 95%;
+	margin: 0 auto;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-style: solid;
+	border-width: 2px;
+}
+
+#approval {
+	margin-bottom: 100px;
+	margin-top: 50px;
+	text-align: center;
+}
+
+#user span {
+	font-size: large;
 }
 
 @media all and (min-width: 500px) {
+	
 	.contenthome {
 		width: 400px;
 		margin: 0 auto;
@@ -184,7 +236,7 @@ footer::after {
 }
 
 @media all and (min-width: 650px) {
-
+	
 	.menu {
 		width: 650px;
 	}
@@ -192,6 +244,7 @@ footer::after {
 	#logocontainer img {
 		width: 570px;
 	}
+
 	.login {
 		margin-top: 15px;
 		margin-right: 20px;
@@ -206,22 +259,31 @@ footer::after {
 		width: 70%;
 		margin-bottom: 200px;
 	}
+
 	.contentindex {
-	width: 70%;
-	margin: 0 auto;
-}
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	#login,
+	#signup {
+		width: 70%;
+	}
 
 }
 
 @media all and (min-width: 800px) {
+	
 	.contenthome {
 		width: 70%;
 		margin: 0 auto;
 	}
+
 	#imageright {
 		float: right;
 		margin-top: 120px;
 	}
+
 	#imageleft {
 		float: left;
 		margin-top: 100px;
@@ -237,12 +299,20 @@ footer::after {
 		width: 250px;
 		margin-bottom: 40px;
 	}
+
 	#logocontainer {
 		margin-top: 20px;
 	}
+
+	#user {
+		width: 70%;
+	}
+
+
 }
 
 @media all and (min-width: 870px) {
+
 	.aboutimage {
 		width: 40%;
 		display: inline-block;
@@ -262,33 +332,49 @@ footer::after {
 		width: 60%;
 		margin-bottom: 250px;
 	}
+
 	.contentindex {
 	width: 60%;
+	}
+
+	#login,
+	#signup {
+		width: 60%;
 	}
 }
 
 @media all and (min-width: 940px) {
+	
 	.image:first-child {
 		margin-right: 50px;
 	}
+
 	.image:last-child {
 		margin-left: 20px;
 	}
 }
 
 @media all and (min-width: 1000px) {
+	
 	.image:first-child {
 		margin-right: 80px;
 	}
 }
 
 @media all and (min-width: 1100px) {
+
 	.image:last-child {
 		margin-left: 30px;
+	}
+
+	#login,
+	#signup {
+		width: 50%;
 	}
 }
 
 @media all and (min-width: 1200px) {
+	
 	.image:last-child {
 		margin-left: 70px;
 	}
@@ -297,6 +383,7 @@ footer::after {
 		width: 260px;
 		margin-bottom: 40px;
 	}
+
 	footer {
 		margin-top: 50px;
 	}
@@ -305,39 +392,51 @@ footer::after {
 		width: 50%;
 		margin-top: 100px;
 	}
+
+	#user {
+		width: 50%;
+	}
 }
 
 
 @media all and (min-width: 1300px) {
+	
 	#desktopmenucontainer {
 		display: inline;
 	}
+
 	.hamburger {
 		display: none;
 	}
+
 	.desktopmenu a {
 		font-size: 40px;
 		margin-left: 30px;
 		text-decoration: none;
 	}
+
 	.desktopmenu a:hover {
 		text-decoration: underline;
 	}
+
 	.desktopmenu li {
 		margin: 0;
 		display: inline;
 	}
+
 	.login {
 		margin-top: 25px;
 		margin-right: 30px;
 	}
+
 	.image:last-child {
 		width: 300px;
 		margin-bottom: 40px;
 		margin-top: 40px;
 		margin-left: 75px;
 	}
-		#logocontainer {
+	
+	#logocontainer {
 		margin-top: 40px;
 		margin-bottom: 30px;
 	}
@@ -345,11 +444,13 @@ footer::after {
 }
 
 @media all and (min-width: 1400px) {
+	
 	.image:last-child {
 		margin-bottom: 50px;
 		margin-top: 50px;
 		margin-left: 100px;
 	}
+
 	.image:first-child {
 		margin-right: 70px;
 	}

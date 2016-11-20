@@ -6,17 +6,6 @@
 		<title>Sophisticated Pedagogical Practice</title>
 		<meta name="description" content="Sophisticated Pedagogical Practice">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-	</head>
-	<body>
-
-		<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial=scale=1">
-		<title>Sophisticated Pedagogical Practice</title>
-		<meta name="description" content="Sophisticated Pedagogical Practice">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css.map">
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
@@ -62,49 +51,22 @@
 			</div>
 		</nav>
 
-		<div class="contentapproval">
-			<div id="approval">
-				<h1>Approve Users</h1>
-				<div id="user">
-					<div id="usercontent">
-						<span>First Name</span>
-						<span>Last Name</span><br>
-						<button type="button" class="btn btn-success btn lg">Approve this user</button>
-						<button type="button" class="btn btn-danger btn lg">Delete User</button>
-					</div>
+		<div class="contentlogin">
+			<div id="login">
+				<h1>Login</h1>
+				<form action="" method="post" id="loginForm">
+				<div class="form-group">
+					<label for="loginEmail">Email:</label>
+					<input type="email" name="Email" placeholder="Enter your email address" class="form-control" id="loginEmail" value="">
+					<p id="emailMessage"></p>
 				</div>
-				<div id="user">
-					<div id="usercontent">
-						<span>First Name</span>
-						<span>Last Name</span><br>
-						<button type="button" class="btn btn-success btn lg">Approve this user</button>
-						<button type="button" class="btn btn-danger btn lg">Delete User</button>
-					</div>
+				<div class="form-group">
+					<label for="loginPassword">Password:</label>
+					<input type="password" name="password" placeholder="Enter your password" class="form-control" id="loginPassword">
+					<p id="passwordMessage"></p>
 				</div>
-				<div id="user">
-					<div id="usercontent">
-						<span>First Name</span>
-						<span>Last Name</span><br>
-						<button type="button" class="btn btn-success btn lg">Approve this user</button>
-						<button type="button" class="btn btn-danger btn lg">Delete User</button>
-					</div>
-				</div>
-				<div id="user">
-					<div id="usercontent">
-						<span>First Name</span>
-						<span>Last Name</span><br>
-						<button type="button" class="btn btn-success btn lg">Approve this user</button>
-						<button type="button" class="btn btn-danger btn lg">Delete User</button>
-					</div>
-				</div>
-				<div id="user">
-					<div id="usercontent">
-						<span>First Name</span>
-						<span>Last Name</span><br>
-						<button type="button" class="btn btn-success btn lg">Approve this user</button>
-						<button type="button" class="btn btn-danger btn lg">Delete User</button>
-					</div>
-				</div>
+				<input type="submit" name="login" value="Login Now!" id="loginSubmit" class="btn btn-default btn-lg">
+				</form>
 			</div>
 		</div>
 		<footer>
@@ -119,8 +81,5 @@
 		<script src="/js/bootstrap.min.js"></script>
 		<script src="/js/npm.js"></script>
 		<script src="/js/navigation.js"></script>
-	</body>
-</html>
-
 	</body>
 </html>

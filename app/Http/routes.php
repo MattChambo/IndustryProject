@@ -17,3 +17,6 @@ Route::get('AboutBook', 'AboutBookController@index');
 Route::get('Index', 'IndexController@index');
 Route::get('Chapter', 'ChapterController@index');
 Route::get('Approval', 'ApprovalController@index');
+Route::get('Login', 'LoginController@index');
+Route::get('Signup', 'SignupController@index');
+

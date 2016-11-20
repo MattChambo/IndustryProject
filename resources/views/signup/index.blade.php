@@ -6,17 +6,6 @@
 		<title>Sophisticated Pedagogical Practice</title>
 		<meta name="description" content="Sophisticated Pedagogical Practice">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-	</head>
-	<body>
-
-		<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial=scale=1">
-		<title>Sophisticated Pedagogical Practice</title>
-		<meta name="description" content="Sophisticated Pedagogical Practice">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css.map">
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
@@ -62,49 +51,37 @@
 			</div>
 		</nav>
 
-		<div class="contentapproval">
-			<div id="approval">
-				<h1>Approve Users</h1>
-				<div id="user">
-					<div id="usercontent">
-						<span>First Name</span>
-						<span>Last Name</span><br>
-						<button type="button" class="btn btn-success btn lg">Approve this user</button>
-						<button type="button" class="btn btn-danger btn lg">Delete User</button>
-					</div>
+		<div class="contentsignup">
+			<div id="signup">
+				<h1>Sign Up</h1>
+				<form action="" method="post" id="signupForm">
+				<div class="form-group">
+					<label for="firstName">First Name:</label>
+					<input type="text" name="firstname" placeholder="Please use your real name" class="form-control" id="firstName" value="">
+					<p id="firstNameMessage"></p>
 				</div>
-				<div id="user">
-					<div id="usercontent">
-						<span>First Name</span>
-						<span>Last Name</span><br>
-						<button type="button" class="btn btn-success btn lg">Approve this user</button>
-						<button type="button" class="btn btn-danger btn lg">Delete User</button>
-					</div>
+				<div class="form-group">
+					<label for="lastName">Last Name:</label>
+					<input type="text" name="lastname" placeholder="Please use your real name" class="form-control" id="lastName" value="">
+					<p id="lastNameMessage"></p>
 				</div>
-				<div id="user">
-					<div id="usercontent">
-						<span>First Name</span>
-						<span>Last Name</span><br>
-						<button type="button" class="btn btn-success btn lg">Approve this user</button>
-						<button type="button" class="btn btn-danger btn lg">Delete User</button>
-					</div>
+				<div class="form-group">
+					<label for="signupEmail">Email:</label>
+					<input type="email" name="email" placeholder="Enter your email address" class="form-control" id="signupEmail" value="">
+					<p id="emailMessage"></p>
 				</div>
-				<div id="user">
-					<div id="usercontent">
-						<span>First Name</span>
-						<span>Last Name</span><br>
-						<button type="button" class="btn btn-success btn lg">Approve this user</button>
-						<button type="button" class="btn btn-danger btn lg">Delete User</button>
-					</div>
+				<div class="form-group">
+					<label for="signupPassword">Password:</label>
+					<input type="password" name="password" placeholder="Enter your password" class="form-control" id="signupPassword">
+					<p id="passwordMessage"></p>
 				</div>
-				<div id="user">
-					<div id="usercontent">
-						<span>First Name</span>
-						<span>Last Name</span><br>
-						<button type="button" class="btn btn-success btn lg">Approve this user</button>
-						<button type="button" class="btn btn-danger btn lg">Delete User</button>
-					</div>
+				<div class="form-group">
+					<label for="reenterSignupPassword">Password:</label>
+					<input type="password" name="reenterpassword" placeholder="Reenter your password" class="form-control" id="reenterSignupPassword">
+					<p id="reenterPasswordMessage"></p>
 				</div>
+				<input type="submit" name="Signup" value="Sign Up Now!" id="signupSubmit" class="btn btn-default btn-lg">
+				</form>
 			</div>
 		</div>
 		<footer>
@@ -119,8 +96,5 @@
 		<script src="/js/bootstrap.min.js"></script>
 		<script src="/js/npm.js"></script>
 		<script src="/js/navigation.js"></script>
-	</body>
-</html>
-
 	</body>
 </html>
