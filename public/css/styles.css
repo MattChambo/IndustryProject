@@ -65,7 +65,8 @@ nav div {
 }
 
 .image {
-	width: 100%;
+	width: 95%;
+	margin-bottom: 15px;
 }
 
 .menu li {
@@ -91,6 +92,10 @@ footer {
 	background-color: black;
 	padding-bottom: 10px;
 	padding-top: 10px;
+}
+
+a {
+	color: black;
 }
 
 footer span {
@@ -121,10 +126,12 @@ footer::after {
 
 #desktopmenucontainer {
 	display: none;
+	color: black;
 }
 
 .login {
 	margin-top: 10px;
+	color: black;
 }
 
 .abouttext {
@@ -410,6 +417,10 @@ footer::after {
 	}
 
 	.hamburger {
+		display: none;
+	}
+
+	#menucontainer {
 		display: none;
 	}
 
