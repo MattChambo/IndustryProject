@@ -20,3 +20,5 @@ Route::get('Approval', 'ApprovalController@index');
 Route::get('Login', 'LoginController@index');
 Route::get('Signup', 'SignupController@index');
 
+Route::resource('chapters', 'ChaptersController');
+

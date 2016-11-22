@@ -13,9 +13,9 @@
 		<div class="contentchapter">
 			<h1>Chapter 1</h1>
 			<div class="form-group">
-				{!! Form::open([]) !!}
-					{{ Form::textarea('chapter', null, ['class' => 'form-control', 'chaptertext']) }}
-					{{ Form::submit('Save Chapter', ['class' => 'btn btn-default btn-lg'])}}
+				{!! Form::open(['route' => 'chapters.store']) !!}
+					{{ Form::textarea('chapter', null, array('class' => 'form-control', 'required' =>'') }}
+					{{ Form::submit('Save Chapter', array('class' => 'btn btn-default btn-lg'))}}
 					<!-- <button type="submit" class="btn btn-default">Save Chapter</button> -->
 				{!! Form::close() !!}
 			</div>
