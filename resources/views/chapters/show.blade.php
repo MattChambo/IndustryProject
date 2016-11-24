@@ -9,7 +9,7 @@
 @section('content')
 
 		<div class="contentchapter">
-			<h1>Chapter 1</h1>
+			<h1>{{ $chapter->title }}</h1>
 			<div class="chaptercontent">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

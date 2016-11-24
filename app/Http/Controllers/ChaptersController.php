@@ -22,7 +22,8 @@ class ChaptersController extends Controller
     {
         $chapter = chapters::all();
 
-        return view('chapters.index')->withChapters($chapter);
+        //return view('chapters.index')->withChapters($chapter);
+        return view('chapters.index', compact('chapter'));
     }
 
     /**
@@ -59,6 +60,8 @@ class ChaptersController extends Controller
 
 
         $brandNewChapter->save();
+
+        return redirect('/chapters');
     }
 
     /**
