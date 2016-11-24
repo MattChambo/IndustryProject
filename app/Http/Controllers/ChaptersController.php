@@ -45,13 +45,18 @@ class ChaptersController extends Controller
     {
         $this->validate($request, array(
 
-            'chapter' => 'required'
+            'title' => 'required|min:1|max:255',
+            'description' => 'required|min:1',
+            'chapter' => 'required|min:1'
 
         ));
 
         $chapter = new chapters;
 
+        $title->title = $request->title;
+        $description->description = $request->description;
         $chapter->chapter = $request->chapter;
+
 
         $post->save();
     }

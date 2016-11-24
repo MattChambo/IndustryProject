@@ -11,12 +11,18 @@
 @section('content')
 
 		<div class="contentchapter">
-			<h1>Chapter 1</h1>
 			<div class="form-group">
-				{!! Form::open(['route' => 'chapters.store']) !!}
-					{{ Form::textarea('chapter', null, array('class' => 'form-control', 'required' =>'') }}
-					{{ Form::submit('Save Chapter', array('class' => 'btn btn-default btn-lg'))}}
-					<!-- <button type="submit" class="btn btn-default">Save Chapter</button> -->
+			{!! Form::open([]) !!}
+				{{ Form::label('title', 'Chapter Title:') }}
+				{{ Form::text('title', null, array('class' => 'form-control')) }}
+				{{ Form::label('description', 'Chapter Description:') }}
+				{{ Form::submit('Save Title and Description', array('class' => 'form-control')) }}
+			{!! Form::close() !!}
+		</div>
+		<div class="form-group">
+				{!! Form::open([]) !!}
+					{{ Form::textarea('chapter', null, array('class' => 'form-control') }}
+					{{ Form::submit('Save Chapter', array('class' => 'btn btn-default btn-lg')) }}
 				{!! Form::close() !!}
 			</div>
 		</div>
