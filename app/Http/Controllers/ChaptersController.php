@@ -51,14 +51,14 @@ class ChaptersController extends Controller
 
         ));
 
-        $chapter = new chapters;
+        $brandNewChapter = new chapters;
 
-        $title->title = $request->title;
-        $description->description = $request->description;
-        $chapter->chapter = $request->chapter;
+        $brandNewChapter->title = $request->title;
+        $brandNewChapter->description = $request->description;
+        $brandNewChapter->chapter = $request->chapter;
 
 
-        $post->save();
+        $brandNewChapter->save();
     }
 
     /**
