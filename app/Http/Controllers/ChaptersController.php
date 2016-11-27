@@ -61,6 +61,8 @@ class ChaptersController extends Controller
 
         $brandNewChapter->save();
 
+        Session::flash('success', 'The chapter was successfully saved');
+
         return redirect('/chapters');
     }
 
@@ -84,7 +86,9 @@ class ChaptersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $chapter = chapters::find($id);
+
+        return view('chapters.edit', compact('chapter'));
     }
 
     /**
@@ -96,7 +100,24 @@ class ChaptersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, array(
+            'title' => 'required|min:1|max:255',
+            'description' => 'required|min:1',
+            'chapter' => 'required|min:1'
+
+            ));
+
+        $chapter = chapters::find($id);
+
+        $chapter->title = $request->input('title');
+        $chapter->description = $request->input('description');
+        $chapter->chapter= $request->input('chapter');
+
+        $chapter->save();
+
+        Session::flash('success', 'This chapter was successfully saved.');
+
+        return redirect()->route('chapters.show', $chapter->id);
     }
 
     /**
@@ -107,6 +128,12 @@ class ChaptersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $chapter = chapters::find($id);
+
+        $chapter->delete();
+
+        Session::flash('success', 'The chapter was successfully deleted');
+
+        return redirect()->route('chapters.index');
     }
 }

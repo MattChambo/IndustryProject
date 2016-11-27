@@ -15,10 +15,13 @@
 			{!! Form::open(['route' => 'chapters.store']) !!}
 				{{ Form::label('title', 'Chapter Title:') }}
 				{{ Form::text('title', null, array('class' => 'form-control')) }}
+				<p id="titleMessage"></p>
 				{{ Form::label('description', 'Chapter Description:') }}
 				{{ Form::text('description', null, array('class' => 'form-control'))}}
+				<p id="descriptionMessage"></p>
 				{{ Form::textarea('chapter', null, array('class' => 'form-control')) }}
-				{{ Form::submit('Save Chapter', array('class' => 'btn btn-default btn-lg')) }}
+				<p id="chapterMessage"></p>
+				{{ Form::submit('Save Chapter', array('class' => 'btn btn-success btn-block')) }}
 			{!! Form::close() !!}
 		</div>
 	</div>

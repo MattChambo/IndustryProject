@@ -11,12 +11,22 @@
 @section('content')
 
 		<div class="contentchapter">
-			<h1>Chapter 1</h1>
 			<div class="form-group">
-				{!! Form::open([]) !!}
-					{{ Form::textarea('chapter', null, ['class' => 'form-control', 'chaptertext']) }}
-					{{ Form::submit('Save Chapter', ['class' => 'btn btn-default btn-lg'])}}
-					<!-- <button type="submit" class="btn btn-default">Save Chapter</button> -->
+				{!! Form::model($chapter, ['route' => ['chapters.update', $chapter->id], 'method' => 'PUT']) !!}
+					{{ Form::label('title', 'Chapter Title:') }}
+					{{ Form::text('title', null, array('class' => 'form-control')) }}
+					<p id="titleMessage"></p>
+					{{ Form::label('description', 'Chapter Description:') }}
+					{{ Form::text('description', null, array('class' => 'form-control')) }}
+					<p id="descriptionMessage"></p>
+					{{ Form::textarea('chapter', null, array('class' => 'form-control')) }}
+					<p id="chapterMessage"></p>
+					{{ Form::submit('Save Chapter', array('class' => 'btn btn-success btn-lg btn-block')) }}
+				{!! Form::close() !!}
+			</div>
+			<div class="form-group" id="delete">
+				{!! Form::open(['route' => ['chapters.destroy', $chapter->id], 'method' => 'DELETE']) !!}
+						{!! Form::submit('Delete', ['class' => 'btn btn-danger btn-lg btn-block']) !!}
 				{!! Form::close() !!}
 			</div>
 		</div>

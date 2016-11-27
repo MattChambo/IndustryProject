@@ -4,7 +4,8 @@
 			<a href="/"><img src="/images/logo.png" class="logo"></a>
 		</div>
 		<button class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></button>
-		<span class="login"><a href="/Login">Login</a> | <a href="/Signup">Sign Up</a></span>
+		<ul class="login"><a href="/chapters/create">New Chapter</a> | <a href="">Log Out</a>
+		<a href="/Login">Login</a> | <a href="/Signup">Sign Up</a></ul>
 	</div>
 	<div id="menucontainer">
 		<ul class="menu">
@@ -15,7 +16,7 @@
 				<a href="/AboutBook" class="menulink">About the Book</a>
 			</li>
 			<li>
-				<a href="/Index" class="menulink">Index</a>
+				<a href="/chapters" class="menulink">Index</a>
 			</li>
 		</ul>
 	</div>
@@ -29,7 +30,7 @@
 				<a href="/AboutBook">About the Book</a>
 			</li>
 			<li>
-				<a href="/Index">Index</a>
+				<a href="/chapters">Index</a>
 			</li>
 		</ul>
 	</div>
