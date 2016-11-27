@@ -8,7 +8,7 @@
 		<a href="/Login">Login</a> | <a href="/Signup">Sign Up</a></ul>
 	</div>
 	<div id="menucontainer">
-		<ul class="menu">
+		<ul class="menu" roll="menu">
 			<li>
 				<a href="/About" class="menulink">About Mary</a>
 			</li>
@@ -22,7 +22,7 @@
 	</div>
 
 	<div id="desktopmenucontainer">
-		<ul class="desktopmenu">
+		<ul class="desktopmenu" roll="menu">
 			<li>
 				<a href="/About">About Mary</a>
 			</li>
