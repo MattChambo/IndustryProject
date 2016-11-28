@@ -21,4 +21,7 @@ Route::get('Login', 'LoginController@index');
 Route::get('Signup', 'SignupController@index');
 
 Route::resource('chapters', 'ChaptersController');
+Route::post('Signup', 'Auth\AuthController@register');
+Route::get('logout', 'Auth\AuthController@logout');
+
 

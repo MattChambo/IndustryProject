@@ -14,12 +14,12 @@
 			<div class="form-group">
 				{!! Form::model($chapter, ['route' => ['chapters.update', $chapter->id], 'method' => 'PUT']) !!}
 					{{ Form::label('title', 'Chapter Title:') }}
-					{{ Form::text('title', null, array('class' => 'form-control')) }}
+					{{ Form::text('title', old('title'), array('class' => 'form-control', '')) }}
 					<p id="titleMessage"></p>
 					{{ Form::label('description', 'Chapter Description:') }}
-					{{ Form::text('description', null, array('class' => 'form-control')) }}
+					{{ Form::text('description', old('description'), array('class' => 'form-control')) }}
 					<p id="descriptionMessage"></p>
-					{{ Form::textarea('chapter', null, array('class' => 'form-control')) }}
+					{{ Form::textarea('chapter', old('chapter'), array('class' => 'form-control')) }}
 					<p id="chapterMessage"></p>
 					{{ Form::submit('Save Chapter', array('class' => 'btn btn-success btn-lg btn-block')) }}
 				{!! Form::close() !!}

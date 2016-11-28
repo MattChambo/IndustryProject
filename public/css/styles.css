@@ -109,6 +109,12 @@ footer {
 	padding-top: 10px;
 }
 
+#editButton {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
 a {
 	color: black;
 }
@@ -334,6 +340,10 @@ footer::after {
 
 	#user {
 		width: 70%;
+	}
+
+	#editButton {
+		width:20%;
 	}
 
 

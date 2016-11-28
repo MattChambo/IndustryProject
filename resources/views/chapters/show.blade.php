@@ -13,6 +13,11 @@
 			<div class="chaptercontent">
 				{{ $chapter->chapter }}}
 			</div>
+			<div class="form-group" id="editButton">
+				{!! Form::open(['route' => ['chapters.edit', $chapter->id]]) !!}
+						{!! Form::submit('Edit', ['class' => 'btn btn-primary btn-block']) !!}
+				{!! Form::close() !!}
+			</div>
 			<hr>
 			<div class="commentsection">
 				<p>User name date</p>
