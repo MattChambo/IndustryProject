@@ -12,46 +12,16 @@
 		<div class="contentapproval">
 			<div id="approval">
 				<h1>Approve Users</h1>
-				<div id="user">
-					<div id="usercontent">
-						<span>First Name</span>
-						<span>Last Name</span><br>
-						<button type="button" class="btn btn-success btn lg">Approve this user</button>
-						<button type="button" class="btn btn-danger btn lg">Delete User</button>
+				@foreach ($users as $User)
+					<div id="user">
+						<div id="usercontent">
+							<span>{{ $User->first_name }}</span>
+							<span>{{ $User->last_name }}</span><br>
+							<a class="btn btn-success" href="#">Approve User</a>
+							<a class="btn btn-danger" href="Approval/destroy/{{$User->id}}">Delete User</a>
+						</div>
 					</div>
-				</div>
-				<div id="user">
-					<div id="usercontent">
-						<span>First Name</span>
-						<span>Last Name</span><br>
-						<button type="button" class="btn btn-success btn lg">Approve this user</button>
-						<button type="button" class="btn btn-danger btn lg">Delete User</button>
-					</div>
-				</div>
-				<div id="user">
-					<div id="usercontent">
-						<span>First Name</span>
-						<span>Last Name</span><br>
-						<button type="button" class="btn btn-success btn lg">Approve this user</button>
-						<button type="button" class="btn btn-danger btn lg">Delete User</button>
-					</div>
-				</div>
-				<div id="user">
-					<div id="usercontent">
-						<span>First Name</span>
-						<span>Last Name</span><br>
-						<button type="button" class="btn btn-success btn lg">Approve this user</button>
-						<button type="button" class="btn btn-danger btn lg">Delete User</button>
-					</div>
-				</div>
-				<div id="user">
-					<div id="usercontent">
-						<span>First Name</span>
-						<span>Last Name</span><br>
-						<button type="button" class="btn btn-success btn lg">Approve this user</button>
-						<button type="button" class="btn btn-danger btn lg">Delete User</button>
-					</div>
-				</div>
+				@endforeach
 			</div>
 		</div>
 		

@@ -1,16 +1,16 @@
 <nav>
 	<div>
 		<div id="logocontainer">
-			<a href="/"><img src="/images/logo.png" class="logo"></a>
+			<a href="/"><img src="/images/logo.png" alt="Log for Sophisticated Pedagogical Practice" class="logo"></a>
 		</div>
 		<button class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></button>
 		<ul class="login">
 			@if (Auth::guest())
-			<a href="/Login">Login</a> | <a href="/Signup">Sign Up</a>
+			<li><a href="/Login">Login</a> | </li><li><a href="/Signup">Sign Up</a></li>
 			@elseif (Auth::user()->privilege == 'admin')
-			<a href="/Approval">Approve User</a> | <a href="/chapters/create">New Chapter</a> | <a href="/logout">Log Out</a>
+			<li><a href="/Approval">Approve User</a> | </li><li><a href="/Edit Account">Edit Account</a> | </li><li><a href="/chapters/create">New Chapter</a> | </li><li><a href="/logout">Log Out</a></li>
 			@else
-			<a href="/logout">Log Out</a>
+			<li><a href="/EditAccount">Edit Account</a> | </li><li><a href="/logout">Log Out</a></li>
 			@endif
 		</ul>
 	</div>

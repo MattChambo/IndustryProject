@@ -10,19 +10,18 @@
 
 		<div class="contentchapter">
 			<h1>{{ $chapter->title }}</h1>
+			<div class="form-group" id="editButton">
+				{!! Form::open(['route' => ['chapters.edit', $chapter->id]]) !!}
+						{!! Form::submit('Edit Chapter', ['class' => 'btn btn-primary btn-block']) !!}
+				{!! Form::close() !!}
+			</div>
 			<div class="chaptercontent">
 				{{ $chapter->chapter }}}
 			</div>
-			<div class="form-group" id="editButton">
-				{!! Form::open(['route' => ['chapters.edit', $chapter->id]]) !!}
-						{!! Form::submit('Edit', ['class' => 'btn btn-primary btn-block']) !!}
-				{!! Form::close() !!}
-			</div>
 			<hr>
 			<div class="commentsection">
-				<p>User name date</p>
 				{!! Form::open([]) !!}
-					{{ Form::textarea('comment', null, ['class' => 'form-control', 'commenttext']) }}
+					{{ Form::textarea('comment', null, ['class' => 'form-control commenttext']) }}
 					{{ Form::submit('Post Comment', ['class' => 'btn btn-success btn-block'])}}
 				{!! Form::close() !!}
 			</div>

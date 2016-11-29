@@ -15,7 +15,7 @@
 				@foreach ($chapter as $chapters)
 					<li>
 						<a href="{{ route('chapters.show', $chapters->id) }}">{{ $chapters->title }}</a>
-						<div id="description">
+						<div class="description">
 							{{ $chapters->description }}
 						</div>
 					</li>

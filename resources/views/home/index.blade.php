@@ -15,7 +15,7 @@
 			</div>
 			<div id="imageleft">
 				<a href="/AboutBook"><img src="/images/book1.jpg" alt="A photo of a book" class="image"></a><br>
-				<a href="/Index"><img src="/images/Business.jpg" alt="A photo of a desk with a computer on it" class="image"></a>
+				<a href="/chapters"><img src="/images/Business.jpg" alt="A photo of a desk with a computer on it" class="image"></a>
 			</div>
 		</div>
 
