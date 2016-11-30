@@ -14,7 +14,8 @@ class ApprovalController extends Controller
 {
     public function index()
 	    {
-	        $users = User::all();
+	        $users = User::where('privilege', '=', 'unapproved_user')->get();
+	       
 
 	        //return view('chapters.index')->withChapters($chapter);
 	        return view('Approval.index', compact('users'));
@@ -28,6 +29,6 @@ class ApprovalController extends Controller
 
 	        Session::flash('success', 'The user was successfully deleted');
 
-	        return redirect()->route('Approval.index');
+	        return redirect('Approval');
 	    }
 }

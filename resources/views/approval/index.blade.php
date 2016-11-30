@@ -18,7 +18,7 @@
 							<span>{{ $User->first_name }}</span>
 							<span>{{ $User->last_name }}</span><br>
 							<a class="btn btn-success" href="#">Approve User</a>
-							<a class="btn btn-danger" href="Approval/destroy/{{$User->id}}">Delete User</a>
+							<a class="btn btn-danger" href="/Approval/destroy/{{$User->id}}">Delete User</a>
 						</div>
 					</div>
 				@endforeach
