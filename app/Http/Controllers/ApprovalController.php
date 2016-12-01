@@ -31,4 +31,17 @@ class ApprovalController extends Controller
 
 	        return redirect('Approval');
 	    }
+
+	  public function approve($id)
+	  {
+	  		$users = User::findOrFail($id);
+
+	  		$users->privilege = 'user';
+
+	  		$users->save();
+
+	  		Session::flash('success', 'The user was successfully approved');
+
+	  		return redirect('Approval');
+	  }
 }

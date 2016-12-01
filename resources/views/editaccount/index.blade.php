@@ -11,7 +11,32 @@
 		<div class="contentsignup">
 			<div id="signup">
 				<h1>Edit Your Account Details</h1>
-				<form action="#" method="post" id="signupForm">
+					
+						{!! Form::model($user, ['route' => ['EditAccount'], 'method' => 'PUT']) !!}
+							<div class="form-group">
+								{{ Form::label('first_name', 'First Name:') }}
+								{{ Form::text('first_name', old('first_name'), array('class' => 'form-control', '')) }}
+							</div>
+							<div class="form-group">
+								{{ Form::label('last_name', 'Last Name:') }}
+								{{ Form::text('last_name', old('last_name'), array('class' => 'form-control')) }}
+							</div>
+							<div class="form-group">
+								{{ Form::label('email', 'Email:') }}
+								{{ Form::email('email', old('chapter'), array('class' => 'form-control')) }}
+							</div>
+							<div class="form-group"> 	
+								{{ Form::label('password', 'Password:') }}
+								{{ Form::password('password', array('class' => 'form-control')) }}
+							</div>
+							<div class="form-group">
+								{{ Form::label('password_confirmation', 'Reenter Password:') }}
+								{{ Form::password('password_confirmation', array('class' => 'form-control')) }}
+							</div>
+								{{ Form::submit('Edit Account Details', array('class' => 'btn btn-default btn-lg')) }}
+						{!! Form::close() !!}
+					
+{{-- 				<form action="#" method="post" id="signupForm">
 				{{ csrf_field() }} 
 				<div class="form-group">
 					<label for="firstName">First Name:</label>
@@ -34,7 +59,7 @@
 					<input type="password" name="password_confirmation" placeholder="Reenter your new password" class="form-control" id="reenterSignupPassword">
 				</div>
 				<input type="submit" name="editaccount" value="Edit Account Details" id="editAccountSubmit" class="btn btn-default btn-lg">
-				</form>
+				</form> --}}
 			</div>
 		</div>
 @endsection

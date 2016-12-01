@@ -106,7 +106,7 @@ class ChaptersController extends Controller
 
             ));
 
-        $chapter = chapters::find($id);
+        $chapter = chapters::findOrFail($id);
 
         $chapter->title = $request->input('title');
         $chapter->description = $request->input('description');

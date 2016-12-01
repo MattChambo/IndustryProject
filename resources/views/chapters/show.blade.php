@@ -11,9 +11,7 @@
 		<div class="contentchapter">
 			<h1>{{ $chapter->title }}</h1>
 			<div class="form-group" id="editButton">
-				{!! Form::open(['route' => ['chapters.edit', $chapter->id]]) !!}
-						{!! Form::submit('Edit Chapter', ['class' => 'btn btn-primary btn-block']) !!}
-				{!! Form::close() !!}
+				<a href="/chapters/{{ $chapter->id }}/edit" class="btn btn-primary btn-block">Edit Chapter</a>
 			</div>
 			<div class="chaptercontent">
 				{{ $chapter->chapter }}}
