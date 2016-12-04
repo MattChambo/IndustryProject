@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 // Name space in the model
 use App\chapters;
+use App\Comments;
 
 use Session;
 
@@ -74,7 +75,8 @@ class ChaptersController extends Controller
     public function show($id)
     {
         $chapter = chapters::find($id);
-        return view('chapters.show')->with('chapter', $chapter);
+
+        return view('chapters.show', compact('chapter'));
     }
 
     /**
@@ -85,7 +87,7 @@ class ChaptersController extends Controller
      */
     public function edit($id)
     {
-        $chapter = chapters::find($id);
+        $chapter = chapters::findOrFail($id);
 
         return view('chapters.edit', compact('chapter'));
     }
@@ -127,12 +129,64 @@ class ChaptersController extends Controller
      */
     public function destroy($id)
     {
-        $chapter = chapters::find($id);
+        $chapter = chapters::findOrFail($id);
 
         $chapter->delete();
 
         Session::flash('success', 'The chapter was successfully deleted');
 
         return redirect()->route('chapters.index');
+    }
+
+    public function newComment(Request $request, $id)
+    {
+        $this->validate($request, array(
+            'comment' => 'required'
+            ));
+        $newComment = new Comments();
+        $newComment->comment = $request->input('comment');
+        $newComment->chapter_id = $id;
+        $newComment->user_id = \Auth::user()->id;
+
+        $newComment->save();
+
+        Session::flash('success', 'Your comment has been saved');
+
+        return redirect()->route('chapters.show', $id);
+    }
+
+    public function editComment($id)
+    {
+        $comment = Comments::findOrFail($id);
+        return view('editcomment.index', compact('comment'));
+    }
+
+    public function saveEditComment(Request $request, $id)
+    {
+        $this->validate($request, array(
+            'comment' => 'required|min:1'
+
+            ));
+
+        $comment = Comments::findOrFail($id);
+
+        $comment->comment = $request->input('comment');
+   
+        $comment->save();
+
+        Session::flash('success', 'Your comment was successfully edited.');
+
+        return redirect()->route('chapters.show', $comment->chapter->id);
+    }
+
+    public function destroyComment($id)
+    {
+        $comment = Comments::findOrFail($id);
+
+        $comment->delete();
+
+        Session::flash('success', 'The comment was successfully deleted');
+
+        return redirect()->route('chapters.show', $comment->chapter->id);
     }
 }

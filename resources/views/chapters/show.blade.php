@@ -25,18 +25,16 @@
 			</div>
 			<hr>
 			<div class="commentsection">
-				<p>User name | date</p>
+				@foreach ($chapter->comments as $comment)
+				<p>{{ $comment->user->first_name }} {{ $comment->user->last_name }} | {{ date('j M, Y h:ia', strtotime($comment->updated_at)) }}</p>
 				<div class="comment">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					{{ $comment->comment }}
 				</div>
 				<br>
-				<p class="commentMessage">Message</p>
+				<a href="/EditComment/{{ $comment->id }}" class="btn btn-primary">Edit Comment</a>
+				<a href="/EditComment/destroy/{{ $comment->id }}" class="btn btn-danger">Delete Comment</a>
 				<hr>
+				@endforeach
 			</div>
 		</div>
 @endsection

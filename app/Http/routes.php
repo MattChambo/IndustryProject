@@ -30,6 +30,10 @@ Route::post('Login', 'Auth\AuthController@login');
 Route::get('Approval/destroy/{id}', 'ApprovalController@destroy');
 Route::get('Approval/{id}', 'ApprovalController@approve');
 Route::put('EditAccount', 'EditAccountController@update')->name('EditAccount');
-
+Route::get('EditAccount/destroy', 'EditAccountController@destroy');
+Route::post('/chapters/{id}', 'ChaptersController@newComment');
+Route::get('/EditComment/{id}', 'ChaptersController@editComment');
+Route::post('/EditComment/{id}', 'ChaptersController@saveEditComment')->name('EditComment');
+Route::get('EditComment/destroy/{id}', 'ChaptersController@destroyComment');
 
 

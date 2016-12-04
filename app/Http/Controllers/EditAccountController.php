@@ -33,12 +33,23 @@ class EditAccountController extends Controller
         $user->first_name = $request->input('first_name');
         $user->last_name = $request->input('last_name');
         $user->email = $request->input('email');
-        $user->password = $request->input('password');
+        $user->password = password_hash($request->input('password'), PASSWORD_BCRYPT );
 
         $user->save();
 
         Session::flash('success', 'Your account details have been saved.');
 
         return redirect('/');
+    }
+
+     public function destroy(Request $request){
+
+            $user = User::findOrFail(\Auth::user()->id);
+
+            $user->delete();
+
+            Session::flash('success', 'Your account was successfully deleted');
+
+            return redirect('/');
     }
 }
