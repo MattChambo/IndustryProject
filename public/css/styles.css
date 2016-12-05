@@ -28,6 +28,15 @@ footer {
 
 .contenthome {
 	clear: both;
+	margin-bottom: 150px;
+}
+
+.contentindex {
+	margin-bottom: 150px;
+}
+
+.contentsignup {
+	margin-bottom: 150px;
 }
 
 .deletetoggle + a, .hidetoggle {
@@ -226,7 +235,7 @@ footer::after {
 .contentchapter {
 	width: 95%;
 	margin: 0 auto;
-	margin-bottom: 50px;
+	margin-bottom: 150px;
 }
 
 .contentchapter h1 {
@@ -241,7 +250,7 @@ footer::after {
 
 .contentsignup {
 	margin-top: 100px;
-	margin-bottom: 30px;
+	margin-bottom: 150px;
 }
 
 #login,
@@ -266,7 +275,11 @@ footer::after {
 .contentapproval {
 	width: 95%;
 	margin: 0 auto;
-	margin-bottom: 10px;
+	margin-bottom: 150px;
+}
+
+.contentabout {
+	margin-bottom: 150px;
 }
 
 #user {
@@ -297,6 +310,7 @@ footer::after {
 	.contenthome {
 		width: 400px;
 		margin: 0 auto;
+		margin-bottom: 150px;
 	}
 }
 
@@ -322,6 +336,7 @@ footer::after {
 	.contenthome {
 		width: 500px;
 		margin: 0 auto;
+		margin-bottom: 150px;
 	}
 
 	#aboutbooktext {
@@ -346,6 +361,7 @@ footer::after {
 	.contenthome {
 		width: 70%;
 		margin: 0 auto;
+		margin-bottom: 150px;
 	}
 
 	#imageright {

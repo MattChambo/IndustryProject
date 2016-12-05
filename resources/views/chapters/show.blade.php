@@ -4,6 +4,8 @@
 @section('description', 'This is a chapter page for Sophisticated Pedagogical Practice. This is a work in progress chapter of education consultant Mary Chamberlains forthcoming book. If you sign up for mebership and are approved by Mary you can make comments on each chapter.')
 
 @section('tinymce')
+	<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+ 	<script>tinymce.init({ selector:'textarea' });</script>
 @endsection
 
 @section('content')
