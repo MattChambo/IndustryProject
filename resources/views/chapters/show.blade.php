@@ -11,17 +11,21 @@
 		<div class="contentchapter">
 			<h1>{{ $chapter->title }}</h1>
 			<div class="form-group" id="editButton">
-				<a href="/chapters/{{ $chapter->id }}/edit" class="btn btn-primary btn-block">Edit Chapter</a>
+				@if (Auth::check() && Auth::user()->privilege == 'admin')
+					<a href="/chapters/{{ $chapter->id }}/edit" class="btn btn-primary btn-block">Edit Chapter</a>
+				@endif
 			</div>
 			<div class="chaptercontent">
 				{{ $chapter->chapter }}}
 			</div>
 			<hr>
 			<div class="commentsection">
+				@if (Auth::check() && Auth::user()->privilege != 'unapproved_user')
 				{!! Form::open([]) !!}
 					{{ Form::textarea('comment', null, ['class' => 'form-control commenttext']) }}
 					{{ Form::submit('Post Comment', ['class' => 'btn btn-success btn-block'])}}
 				{!! Form::close() !!}
+				@endif
 			</div>
 			<hr>
 			<div class="commentsection">
@@ -31,8 +35,12 @@
 					{{ $comment->comment }}
 				</div>
 				<br>
-				<a href="/EditComment/{{ $comment->id }}" class="btn btn-primary">Edit Comment</a>
-				<a href="/EditComment/destroy/{{ $comment->id }}" class="btn btn-danger">Delete Comment</a>
+				@if (Auth::check() && $comment->user_id == Auth::user()->id)
+					<a href="/EditComment/{{ $comment->id }}" class="btn btn-primary">Edit Comment</a>
+					<button class="btn btn-danger deletetoggle">Delete Comment</button>
+					<a href="/EditComment/destroy/{{ $comment->id }}" class="btn btn-danger btn-md">Yes</a>
+					<button class="hidetoggle btn btn-primary btn-md">No</button>
+				@endif
 				<hr>
 				@endforeach
 			</div>
@@ -40,6 +48,6 @@
 @endsection
 
 @section('scripts')
-
+	<script type="text/javascript" src="/js/deletetoggle.js"></script>
 @endsection
 

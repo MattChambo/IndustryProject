@@ -3,12 +3,35 @@ body {
 	font-family: arial, sans-serif;
 }
 
+#menucontainer .menu {
+	clear: both;
+}
+
+.hidetoggle {
+	border: none;
+}
+
 .login li {
 	display: inline;
 }
 
+footer {
+	position: fixed;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+}
+
 #explanation {
 	margin-bottom: 10px;
+}
+
+.contenthome {
+	clear: both;
+}
+
+.deletetoggle + a, .hidetoggle {
+	display: none;
 }
 
 a:visited {
@@ -281,6 +304,10 @@ footer::after {
 	
 	.menu {
 		width: 650px;
+	}
+
+	.contenthome {
+	overflow: hidden;
 	}
 
 	#logocontainer img {

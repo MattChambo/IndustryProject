@@ -23,16 +23,19 @@
 					<p id="chapterMessage"></p>
 					{{ Form::submit('Save Chapter', array('class' => 'btn btn-success btn-lg btn-block')) }}
 				{!! Form::close() !!}
-			</div>
+			</div> 
 			<div class="form-group" id="delete">
-				{!! Form::open(['route' => ['chapters.destroy', $chapter->id], 'method' => 'DELETE']) !!}
-						{!! Form::submit('Delete', ['class' => 'btn btn-danger btn-lg btn-block']) !!}
-				{!! Form::close() !!}
+				<button class="btn btn-danger btn-lg btn-block deletetoggle">Delete Chapter</button>
+				{{--{!! Form::open(['route' => ['chapters.destroy', $chapter->id], 'method' => 'DELETE']) !!}
+						{!! Form::submit('Yes', ['class' => 'btn btn-danger btn-md']) !!}
+				{!! Form::close() !!} --}}
+				<a class="btn btn-danger btn-md" href="/chapters/destroy/{{ $chapter->id }}">Yes</a>
+				<button class="hidetoggle btn btn-primary btn-md">No</button>
 			</div>
 		</div>
 
 @endsection
 
 @section('scripts')
-
+	<script type="text/javascript" src="/js/deletetoggle.js"></script>
 @endsection

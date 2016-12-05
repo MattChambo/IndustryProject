@@ -38,11 +38,13 @@
 							</div>
 						{!! Form::close() !!}
 
-						<a class="btn btn-danger btn-lg" href="/EditAccount/destroy">Delete Your Account</a>
+						<button class="btn btn-danger btn-lg deletetoggle">Delete Your Account</button>
+						<a class="btn btn-danger btn-md" href="/EditAccount/destroy">Yes</a>
+						<button class="hidetoggle btn btn-primary btn-md">No</button>
 			</div>
 		</div>
 @endsection
 
 @section('scripts')
-
+	<script type="text/javascript" src="/js/deletetoggle.js"></script>
 @endsection

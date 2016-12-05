@@ -22,7 +22,7 @@ Route::get('Signup', 'SignupController@index');
 
 
 Route::get('EditAccount', 'EditAccountController@index');
-
+Route::get('chapters/destroy/{id}', 'ChaptersController@destroy');
 Route::resource('chapters', 'ChaptersController');
 Route::post('Signup', 'Auth\AuthController@register');
 Route::get('logout', 'Auth\AuthController@logout');

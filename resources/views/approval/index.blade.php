@@ -18,7 +18,9 @@
 							<span>{{ $User->first_name }}</span>
 							<span>{{ $User->last_name }}</span><br>
 							<a class="btn btn-success" href="/Approval/{{ $User->id }}">Approve User</a>
-							<a class="btn btn-danger" href="/Approval/destroy/{{ $User->id }}">Delete User</a>
+							<button class="btn btn-danger deletetoggle">Delete User</button>
+							<a class="btn btn-danger btn-md" href="/Approval/destroy/{{ $User->id }}">Yes</a>
+							<button class="hidetoggle btn btn-primary btn-md">No</button>
 						</div>
 					</div>
 				@endforeach
@@ -28,5 +30,5 @@
 @endsection
 
 @section('scripts')
-
+	<script type="text/javascript" src="/js/deletetoggle.js"></script>
 @endsection

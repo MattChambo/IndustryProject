@@ -8,7 +8,8 @@
 			@if (Auth::guest())
 			<li><a href="/Login">Login</a> | </li><li><a href="/Signup">Sign Up</a></li>
 			@elseif (Auth::user()->privilege == 'admin')
-			<li><a href="/Approval">Approve User</a> | </li><li><a href="/EditAccount">Edit Account</a> | </li><li><a href="/chapters/create">New Chapter</a> | </li><li><a href="/logout">Log Out</a></li>
+			<li><a href="/Approval">Approve User</a> | <li><a href="/chapters/create">New Chapter</a> |</li>
+			<li><a href="/EditAccount">Edit Account</a> | </li><li><a href="/logout">Log Out</a></li>
 			@else
 			<li><a href="/EditAccount">Edit Account</a> | </li><li><a href="/logout">Log Out</a></li>
 			@endif
