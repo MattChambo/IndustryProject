@@ -18,7 +18,7 @@
 				@endif
 			</div>
 			<div class="chaptercontent">
-				{{ $chapter->chapter }}}
+				{!! $chapter->chapter !!}
 			</div>
 			<hr>
 			<div class="commentsection">
@@ -34,7 +34,7 @@
 				@foreach ($chapter->comments as $comment)
 				<p>{{ $comment->user->first_name }} {{ $comment->user->last_name }} | {{ date('j M, Y h:ia', strtotime($comment->updated_at)) }}</p>
 				<div class="comment">
-					{{ $comment->comment }}
+					{!! $comment->comment !!}
 				</div>
 				<br>
 				@if (Auth::check() && $comment->user_id == Auth::user()->id)

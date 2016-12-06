@@ -14,6 +14,10 @@ use Session;
 
 class ChaptersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('show', 'index');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -33,6 +37,12 @@ class ChaptersController extends Controller
      */
     public function create()
     {
+        if(\Auth::user()->privilege != 'admin'){
+            Session::flash('error', 'You can not view this page without admin privileges');
+            return redirect('/');
+        }
+
+
         return view('chapters.create');
     }
 
@@ -87,6 +97,11 @@ class ChaptersController extends Controller
      */
     public function edit($id)
     {
+        if(\Auth::user()->privilege != 'admin'){
+            Session::flash('error', 'You can not view this page without admin privileges');
+            return redirect('/');
+        }
+        
         $chapter = chapters::findOrFail($id);
 
         return view('chapters.edit', compact('chapter'));
@@ -129,6 +144,11 @@ class ChaptersController extends Controller
      */
     public function destroy($id)
     {
+        if(\Auth::user()->privilege != 'admin'){
+            Session::flash('error', 'You can not view this page without admin privileges');
+            return redirect('/');
+        }
+
         $chapter = chapters::findOrFail($id);
 
         $chapter->delete();

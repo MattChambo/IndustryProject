@@ -12,11 +12,20 @@ use Session;
 
 class EditAccountController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
      public function index(){
 
-     	$user = User::findOrFail(\Auth::user()->id);
+       
+            $user = User::findOrFail(\Auth::user()->id);
 
-    	return view('editaccount.index', compact('user'));
+            return view('editaccount.index', compact('user'));
+
+     	
     }
 
     public function update(Request $request){
@@ -43,6 +52,8 @@ class EditAccountController extends Controller
     }
 
      public function destroy(Request $request){
+
+         
 
             $user = User::findOrFail(\Auth::user()->id);
 

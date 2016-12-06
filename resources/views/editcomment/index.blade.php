@@ -4,7 +4,8 @@
 @section('description', 'This is the edit comment page for Sophisticated Pedagogical Practice. A website for the development of education consultant Mary Chamberlains book. This is the index of the chapters of the book.')
 
 @section('tinymce')
-
+	<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+  	<script>tinymce.init({ selector:'textarea' });</script>
 @endsection
 
 @section('content')

@@ -12,8 +12,19 @@ use Session;
 
 class ApprovalController extends Controller
 {
+	    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
 	    {
+	    	if(\Auth::user()->privilege != 'admin'){
+            Session::flash('error', 'You can not view this page without admin privileges');
+            return redirect('/');
+        }
+
+
 	        $users = User::where('privilege', '=', 'unapproved_user')->get();
 	       
 
@@ -23,6 +34,11 @@ class ApprovalController extends Controller
 
     public function destroy($id)
 	    {
+	    	if(\Auth::user()->privilege != 'admin'){
+            Session::flash('error', 'You can not view this page without admin privileges');
+            return redirect('/');
+        }
+        
 	        $users = User::findOrFail($id);
 
 	        $users->delete();
