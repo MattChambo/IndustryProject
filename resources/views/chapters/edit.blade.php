@@ -5,7 +5,30 @@
 
 @section('tinymce')
 	<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
- 	<script>tinymce.init({ selector:'textarea' });</script>
+ 	<script>
+  		tinymce.init({
+		selector: 'textarea',
+		height: 500,
+		theme: 'modern',
+		plugins: [
+		    'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+		    'searchreplace wordcount visualblocks visualchars code fullscreen',
+		    'insertdatetime media nonbreaking save table contextmenu directionality',
+		    'emoticons template paste textcolor colorpicker textpattern imagetools codesample toc'
+		  ],
+		 toolbar1: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+		 toolbar2: 'print preview media | forecolor backcolor emoticons | codesample',
+		 image_advtab: true,
+		 templates: [
+		    { title: 'Test template 1', content: 'Test 1' },
+		    { title: 'Test template 2', content: 'Test 2' }
+		  ],
+		 content_css: [
+		    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+		    '//www.tinymce.com/css/codepen.min.css'
+		  ]
+		 });
+  	</script>
 @endsection
 
 @section('content')
@@ -14,7 +37,7 @@
 			<div class="form-group">
 				{!! Form::model($chapter, ['route' => ['chapters.update', $chapter->id], 'method' => 'PUT']) !!}
 					{{ Form::label('title', 'Chapter Title:') }}
-					{{ Form::text('title', old('title'), array('class' => 'form-control', '')) }}
+					{{ Form::text('title', old('title'), array('class' => 'form-control')) }}
 					<p id="titleMessage"></p>
 					{{ Form::label('description', 'Chapter Description:') }}
 					{{ Form::text('description', old('description'), array('class' => 'form-control')) }}
@@ -26,9 +49,6 @@
 			</div> 
 			<div class="form-group" id="delete">
 				<button class="btn btn-danger btn-lg btn-block deletetoggle">Delete Chapter</button>
-				{{--{!! Form::open(['route' => ['chapters.destroy', $chapter->id], 'method' => 'DELETE']) !!}
-						{!! Form::submit('Yes', ['class' => 'btn btn-danger btn-md']) !!}
-				{!! Form::close() !!} --}}
 				<a class="btn btn-danger btn-md" href="/chapters/destroy/{{ $chapter->id }}">Yes</a>
 				<button class="hidetoggle btn btn-primary btn-md">No</button>
 			</div>

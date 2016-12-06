@@ -15,7 +15,7 @@
 						{!! Form::model($user, ['route' => ['EditAccount'], 'method' => 'PUT']) !!}
 							<div class="form-group">
 								{{ Form::label('first_name', 'First Name:') }}
-								{{ Form::text('first_name', old('first_name'), array('class' => 'form-control', '')) }}
+								{{ Form::text('first_name', old('first_name'), array('class' => 'form-control')) }}
 							</div>
 							<div class="form-group">
 								{{ Form::label('last_name', 'Last Name:') }}
