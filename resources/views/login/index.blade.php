@@ -22,8 +22,9 @@
 					<label for="loginPassword">Password:</label>
 					<input type="password" name="password" placeholder="Enter your password" class="form-control" id="loginPassword">
 				</div>
-				<input type="submit" name="login" value="Login Now!" id="loginSubmit" class="btn btn-default btn-lg">
+				<input type="submit" name="login" value="Login Now!" id="loginsubmit" class="btn btn-default btn-lg">
 				</form>
+				<a href="{{ url('password/reset') }}" class="passwordreset">Forgotten your password? Click here!</a>
 			</div>
 		</div>
 

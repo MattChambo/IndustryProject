@@ -58,6 +58,10 @@ a:visited {
 	margin-bottom: 10px;
 }
 
+.resetpassword {
+	margin-top: 10px;
+}
+
 /*.chaptertext {
 	height: 500px;
 }*/
@@ -262,9 +266,13 @@ footer::after {
 	padding: 15px;
 }
 
-#loginSubmit,
+#loginsubmit,
 #signupSubmit {
 	margin-top: 10px;
+}
+
+#loginsubmit {
+	margin-bottom: 10px;
 }
 
 #login h1,

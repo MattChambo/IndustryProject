@@ -19,6 +19,12 @@ Route::get('Approval', 'ApprovalController@index');
 Route::get('Login', 'LoginController@index');
 Route::get('Signup', 'SignupController@index');
 
+// Password Reset Routes
+Route::get('password/reset/{token?}', 'Auth\PasswordController@showResetForm');
+Route::post('password/email', 'Auth\PasswordController@sendResetLinkEmail');
+Route::post('password/reset', 'Auth\PasswordController@reset');
+
+
 
 Route::get('EditAccount', 'EditAccountController@index');
 Route::get('chapters/destroy/{id}', 'ChaptersController@destroy');
