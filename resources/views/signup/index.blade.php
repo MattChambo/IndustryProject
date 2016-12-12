@@ -12,7 +12,7 @@
 			<div id="signup">
 				<h1>Sign Up</h1>
 				<form action="#" method="post" id="signupForm">
-				<div id="explanation">For security reasons after you sign up Mary will have to approve your account before you can make comments. This allows for greater commenting functionality.
+				<div id="explanation">For security reasons after you sign up Mary will have to approve your account before you can make comments. This allows for greater commenting functionality. You will recieve an email informing you that you have been approved. 
 				</div>
 				{{ csrf_field() }} 
 				<div class="form-group">
