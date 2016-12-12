@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'spedigogicalpractice@gmail.com', 'name' => 'Mary'],
+    'from' => ['address' => 'matthewwilliamchamberlain@gmail.com', 'name' => 'Matt'],
 
     /*
     |--------------------------------------------------------------------------

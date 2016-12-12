@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use Mail;
+
 use App\User;
 
 use Session;
@@ -55,6 +57,13 @@ class ApprovalController extends Controller
 	  		$users->privilege = 'user';
 
 	  		$users->save();
+
+	  		Mail::send('auth.emails.authemail', ['users' => $users], function ($m) use ($users) {
+	  			$m->from('matthewwilliamchamberlain@gmail.com', 'Sophisticated Pedagogical Practice');
+	  			
+	  			$m->to($users->email, $users->first_name)->subject('Your Approval for Sophisticated Pedagogical Practice');
+
+	  			});
 
 	  		Session::flash('success', 'The user was successfully approved');
 

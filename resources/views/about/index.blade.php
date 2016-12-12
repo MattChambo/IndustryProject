@@ -11,7 +11,7 @@
 
 		<div class="contentabout">
 			<div class="aboutimage">
-				<img src="/images/mary2.png" alt="A picture of Mary Chamberlain">
+				<img src="/images/Mary2.png" alt="A picture of Mary Chamberlain">
 			</div>
 			<div class="abouttext">
 				<h1>About Mary</h1>
