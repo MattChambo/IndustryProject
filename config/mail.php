@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'matthewwilliamchamberlain@gmail.com', 'name' => 'Matt'],
+    'from' => ['address' => 'matt@sophisticatedpedagogicalpractice.nz', 'name' => 'Sophisticated Pedagogical Practice'],
 
     /*
     |--------------------------------------------------------------------------
