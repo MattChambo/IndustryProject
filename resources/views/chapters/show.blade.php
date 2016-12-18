@@ -60,7 +60,7 @@
 					{!! $comment->comment !!}
 				</div>
 				<br>
-				@if (Auth::check() && $comment->user_id == Auth::user()->id)
+				@if (Auth::check() && $comment->user_id == Auth::user()->id || Auth::user()->privilege == 'admin')
 					<a href="/EditComment/{{ $comment->id }}" class="btn btn-primary">Edit Comment</a>
 					<button class="btn btn-danger deletetoggle">Delete Comment</button>
 					<a href="/EditComment/destroy/{{ $comment->id }}" class="btn btn-danger btn-md">Yes</a>
