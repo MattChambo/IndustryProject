@@ -29,9 +29,7 @@ class ApprovalController extends Controller
 
 	        $users = User::where('privilege', '=', 'unapproved_user')->get();
 	       
-
-	        //return view('chapters.index')->withChapters($chapter);
-	        return view('Approval.index', compact('users'));
+	        return view('approval.index', compact('users'));
 	    }
 
     public function destroy($id)
