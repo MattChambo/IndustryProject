@@ -180,9 +180,6 @@ footer::after {
 
 .image {
    opacity: 1;
-   /*transition: opacity .25s ease-in-out;
-   -moz-transition: opacity .25s ease-in-out;
-   -webkit-transition: opacity .25s ease-in-out;*/
 }
 
 .image:hover {
